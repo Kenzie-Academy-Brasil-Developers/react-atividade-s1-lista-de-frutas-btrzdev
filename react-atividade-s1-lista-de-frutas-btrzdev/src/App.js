@@ -16,7 +16,7 @@ function App() {
   }, 0);
 
   const fruitsName = fruits.map((fruit) => {
-    return `${fruit.name}  `;
+    return <li>{fruit.name}</li>;
   });
   const filterRedFruits = fruits.filter((fruits) => {
     return fruits.color === "red";
@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p> {totalPrice} R$</p>
-        <p>{fruitsName}</p>
+        <p> Preço total = {totalPrice} R$</p>
+        <ul>{fruitsName}</ul>
         <button onClick={setFruitsFilter}> Filtrar</button>
       </header>
     </div>
